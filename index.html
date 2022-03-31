@@ -1,20 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KV2K6Q57B9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!doctype html>
 
-  gtag('config', 'G-KV2K6Q57B9');
-</script>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Embedded Analytics with Tableau</title>
+  
 </head>
 <body>
+  <div id="vizContainer"></div>
+  <script src="https://us-east-1.online.tableau.com/javascripts/api/tableau-2.min.js"></script>
+  <script>
+    var viz
+    function initViz() {
+      var containerDiv = document.getElementById("vizContainer"),
+      url = "https://us-east-1.online.tableau.com/t/zuar/views/Regional/GlobalTemperatures";
 
-<h1>US GA Test 2 </h1>
-<p>My first paragraph.</p>
-
+      viz = new tableau.Viz(containerDiv, url);
+    }
+    initViz();
+  </script>
+  
 </body>
 </html>
