@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Tableau Dashboard Embed Test</title>
+    
+     <script type="text/javascript"
+	    src="https://tst-daotableau.partners.org/javascripts/api/tableau-2.8.0.min.js">
+      </script>
+ 
+</head>
+<body>
+  <h1> My Tableau Dashboard On My Website</h1>
+  
+  <div id="vizContainer"></div>
+  
+  function initViz() {
+    const conainerDiv = document.getElementById("vizContainer");
+    const url = "https://tst-daotableau.partners.org/javascripts/api/tableau-2.8.0.min.js"
+    };
+    
+    const viz = new tableau.Viz(containerDiv,url, Options);
+    
+  
+  </body>
+</html>
